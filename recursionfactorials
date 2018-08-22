@@ -1,0 +1,35 @@
+import java.util.*;
+import java.lang.*; 
+
+//helps show the difference in recursion algorithms
+
+public class recursion{
+	
+	public static void main(String [] args) {
+		Scanner number = new Scanner(System.in);
+		System.out.println("Enter a number: " );
+		int num = number.nextInt(); 
+		factorial(num); 
+		int x = factorial(num); 
+		System.out.println(num + "! " + " = " + x);
+	}
+	
+/*	public static int factorial(int num) {   //writing with if/else 
+		if (num == 0 || num == 1)
+			return 1; 
+		else
+			return (num * factorial(num-1)); 
+		
+	}
+	*/
+	
+	public static int factorial ( int input )  //can do larger numbers compared to last if/else recursion method
+	{
+	  int x, fact = 1;
+	  for ( x = input; x > 1; x--)
+	     fact *= x;
+
+	  return fact;
+
+	}
+}
