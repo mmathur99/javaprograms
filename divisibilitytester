@@ -1,0 +1,27 @@
+import java.lang.*;
+import java.util.*;
+ 
+public class divisibility{
+	public static void main(String[] args) {
+		
+		Scanner number = new Scanner(System.in); 
+		System.out.println("Divisibility tester");
+		System.out.println("Enter a number : ");
+		int num = number.nextInt(); 
+		//Zero Product Property
+		if (num == 0) {
+			System.out.println("Has no divisors");
+		}
+		//Divisibility
+		int z = 0;
+		for (int i = 1; i<=num ; i++) {
+		
+			if (num %i == 0) {
+				System.out.println("This number is divisible by " + i);
+			z++;
+			}
+			
+		}
+		System.out.println("The number " + num + " has " + z + " divisors");
+	}
+}
